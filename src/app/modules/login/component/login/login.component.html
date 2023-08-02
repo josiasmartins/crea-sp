@@ -1,44 +1,39 @@
-<main class="main">
-  <div class="container">
-    <section class="wrapper">
-      <div class="icon-left">
-        <mat-icon>account_circle</mat-icon>
+<div class="container">
+  <div class="login-left">
+    <div class="login-header">
+      <h1>Welcome to Our Application</h1>
+      <p>Please login ti use the platform</p>
+    </div>
+
+    <form class="login-form">
+      <div class="login-form-content">
+        <div class="form-item">
+          <label for="email">Enter Email</label>
+          <input type="text" id="email">
+        </div>
+        <!-- password -->
+        <div class="form-item">
+          <label class="checkboxLabel" for="password">Enter Password</label>
+          <input type="password" id="password">
+        </div>
+        <!-- checkbox -->
+        <div class="form-item">
+          <div class="checkbox">
+            <label for="remeberMeCheckbox" id="checkboxLabel">Remember me</label>
+            <input type="checkbox" id="remeberMeCheckbox">
+          </div>
+        </div>
+
+        <button type="submit">Sign In</button>
       </div>
-      <div class="heading">
-        <h1 class="text text-large">Sign In</h1>
-      </div>
-      <form name="signin" class="form">
-        <div class="input-control">
-          <mat-icon>person</mat-icon>
-          <mat-form-field appearance="outline">
-            <mat-label>Select Persona</mat-label>
-            <mat-select>
-              <mat-option value="admin">Admin</mat-option>
-              <mat-option value="user">User</mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-        <div class="input-control">
-          <mat-icon>chrome_reader_mode</mat-icon>
-          <mat-form-field appearance="outline">
-            <mat-label>ID / CREA</mat-label>
-            <input matInput placeholder="Enter your ID or CREA">
-          </mat-form-field>
-        </div>
-        <div class="input-control">
-          <mat-icon>lock</mat-icon>
-          <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" placeholder="Enter your password">
-          </mat-form-field>
-        </div>
-        <div class="input-control">
-          <button type="submit" name="submit" class="input-submit">Sign In</button>
-        </div>
-      </form>
-      <div class="icon-right">
-        <mat-icon>lock_open</mat-icon>
-      </div>
-    </section>
+
+      <!-- <div class="login-form-footer">
+        <a href="#">
+          <img width="30" src="" alt="">
+          <img width="30" src="" alt="">
+          <img width="30" src="" alt="">
+        </a>
+      </div> -->
+    </form>
   </div>
-</main>
+</div>
