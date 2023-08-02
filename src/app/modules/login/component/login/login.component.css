@@ -1,68 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+/* Adicione o seguinte código CSS no seu arquivo de estilo (por exemplo, styles.css) */
+
+/* Estilos para o componente "main" */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f1f5f9;
+}
 
 .container {
-  position: relative;
-  max-width: 430px;
+  max-width: 28rem;
   width: 100%;
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container .forms {
-  padding: 30px;
-}
-
-.container .form .title {
-  position: relative;
-  font-size: 27px;
-  font-weight: 600;
-}
-
-.form .title::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 30px;
-  background-color: #4070f4;
-  border-radius: 25px;
-}
-
-
-.form .input-field {
-  background-color: red;
-  margin-top: 30px;
-  height: relative;
-  width: 100%;
-  margin-top: 30px;
-}
-
-.input-field input {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  padding: 0 35px;
+  padding: 2rem 2.5rem;
   border: none;
-  font-size: 16px;
   outline: none;
-  border-bottom: 2px solid #ccc;
-  border-top: 2px solid transparent;
+  border-radius: 0.25rem;
+  color: #121212;
+  background: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-.input-field input:is(:focus, :valid) {
-  border-bottom-color: #4070f4;
+.icon-left,
+.icon-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #80868b;
+  margin-bottom: 2rem;
 }
 
-.input-field i {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  color: #999;
-  font-size: 23px;
+.heading {
+  text-align: center;
 }
 
-.input-field i.icon {
-  left: 0;
+.form {
+  width: 100%;
+  margin-top: 2rem;
 }
+
+.input-control {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.mat-form-field {
+  flex: 1;
+  margin-left: 1rem;
+}
+
+.input-submit {
+  flex: 1;
+  height: auto;
+  padding: 0.65rem 1.25rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+  color: #ffffff;
+  background: #1a73e8;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-transform: capitalize;
+  text-rendering: optimizeLegibility;
+}
+
+.icon-right {
+  margin-left: auto;
+}
+
+/* Adicione mais estilos conforme necessário */
