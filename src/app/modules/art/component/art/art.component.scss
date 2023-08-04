@@ -102,6 +102,7 @@
 
 /*progressbar*/
 #progressbar {
+  display: flex;
   margin-bottom: 30px;
   overflow: hidden;
   /*CSS counters to number the steps*/
