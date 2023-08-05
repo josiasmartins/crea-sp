@@ -14,6 +14,7 @@ import { MatSelectModule } from '@angular/material/select';
 // import { MatStepperModule } from '@angular/material/stepper';
 import { MatIconModule } from '@angular/material/icon';
 import { IonicModule } from '@ionic/angular';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { IonicModule } from '@ionic/angular';
     MatSelectModule,
     // MatStepperModule,
     MatIconModule,
-    IonicModule
+    IonicModule,
+    SharedModule
     // MatStepperModule
   ]
 })
