@@ -1,5 +1,5 @@
 <section>
-  <app-step-progress [active]="step"></app-step-progress>
+  <app-step-progress [currentStep]="step"></app-step-progress>
 
 
   <form action="">
@@ -7,6 +7,15 @@
       <p>dsdsd</p>
       <input class="test" type="text">
     </div> -->
+    <div *ngIf="step == 0" class="input-groups">
+      <app-forms-inpput [placeholder]="'test'" [id]="1"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'josias'" [id]="2"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+
+    </div>
     <div *ngIf="step == 1" class="input-groups">
       <app-forms-inpput [placeholder]="'test'" [id]="1"></app-forms-inpput>
       <app-forms-inpput [placeholder]="'josias'" [id]="2"></app-forms-inpput>
@@ -26,6 +35,15 @@
 
     </div>
     <div *ngIf="step == 3" class="input-groups">
+      <app-forms-inpput [placeholder]="'test'" [id]="1"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'josias'" [id]="2"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+      <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>
+
+    </div>
+    <div *ngIf="step == 4" class="input-groups">
       <app-forms-inpput [placeholder]="'test'" [id]="1"></app-forms-inpput>
       <app-forms-inpput [placeholder]="'josias'" [id]="2"></app-forms-inpput>
       <app-forms-inpput [placeholder]="'test'"></app-forms-inpput>

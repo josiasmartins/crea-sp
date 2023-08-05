@@ -1,4 +1,4 @@
-import { Component, HostListener, Input, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, HostListener, Input, OnInit } from '@angular/core';
 import { StepService } from '../../services/step.service';
 
 @Component({
@@ -8,9 +8,13 @@ import { StepService } from '../../services/step.service';
 })
 export class StepProgressComponent implements OnInit {
 
-  @Input() active!: any;
+  @Input() currentStep = 0;
+  steps: string[] = ['First', 'Second', 'Third', 'Forth', ''];
 
-  constructor(private stepService: StepService) {}
+
+  constructor(private stepService: StepService, private ChangeDetectorRef: ChangeDetectorRef) {
+    
+  }
 
 
   ngOnInit(): void {
@@ -26,9 +30,11 @@ export class StepProgressComponent implements OnInit {
     //   }
     // })
 
+    console.log(this.currentStep, 'ibg')
+
     this.stepService.step.subscribe(res => {
-      this.active = res;
-      console.log(this.active, 'ibg active')
+      this.currentStep = res;
+      console.log(this.currentStep, 'ibg active')
 
       // document.querySelectorAll('.stepper-item').forEach((element: any, index) => {
       //       // element.classList.contains('')
@@ -40,22 +46,35 @@ export class StepProgressComponent implements OnInit {
       //         element.setAttribute('class', 'completed')
       //       }
       //     })
+      this.ChangeDetectorRef.detectChanges();
     })
+    // this.ChangeDetectorRef.detectChanges();
+
 
   }
 
-  // @HostListener('click', ['$event']) 
-  // public test() {
-  //   document.querySelectorAll('.stepper-item').forEach((element: any, index) => {
-  //     // element.classList.contains('')
+  @HostListener('click', ['$event']) 
+  public test(event: any) {
+    console.log(event, 'ibg 33')
+  }
 
-  //     if (index + 1 == this.active) {
-  //       element.setAttribute('class', 'active');
 
-  //       if (index + 1 < this.active)
-  //       element.setAttribute('class', 'completed')
-  //     }
-  //   })
-  // }
+
+  public nextForm() {
+    this.currentStep++;
+
+    // this.stepService.setStep(this.step);
+  }
+
+  public backForm() {
+    this.currentStep--;
+
+    if (this.currentStep <= 0 ) {
+      this.currentStep = 0;
+    }
+
+    // this.stepService.setStep(this.step);
+    
+  }
 
 }

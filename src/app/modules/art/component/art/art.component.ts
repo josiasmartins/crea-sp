@@ -12,12 +12,16 @@ import { StepService } from 'src/app/shared/services/step.service';
 })
 export class ArtComponent {
 
-  public step = 1;
+  public step = 0;
 
   constructor(private stepService: StepService) {}
 
   public nextForm() {
     this.step++;
+
+    if (this.step >= 4) {
+      this.step = 4;
+    }
 
     this.stepService.setStep(this.step);
   }
@@ -25,8 +29,8 @@ export class ArtComponent {
   public backForm() {
     this.step--;
 
-    if (this.step < 0 ) {
-      this.step = 1;
+    if (this.step <= 0 ) {
+      this.step = 0;
     }
 
     this.stepService.setStep(this.step);

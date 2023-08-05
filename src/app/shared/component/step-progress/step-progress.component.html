@@ -1,23 +1,22 @@
 <div class="stepper-wrapper">
-  <div class="stepper-item completed">
+  <div class="stepper-item" [ngClass]="{'active': currentStep === 0, 'completed': currentStep > 0}">
     <div class="step-counter">1</div>
-    <div class="step-name">First</div>
+    <div class="step-name">Primeiro</div>
   </div>
-  <div class="stepper-item completed">
+  <div class="stepper-item" [ngClass]="{'completed': currentStep > 1 , 'active': currentStep === 1}">
     <div class="step-counter">2</div>
-    <div class="step-name">Second</div>
+    <div class="step-name">Segundo</div>
   </div>
-  <div class="stepper-item active">
+  <div class="stepper-item" [ngClass]="{'completed': currentStep > 2 , 'active': currentStep === 2}">
     <div class="step-counter">3</div>
-    <div class="step-name">Third</div>
+    <div class="step-name">Terceiro</div>
   </div>
-  <div class="stepper-item">
+  <div class="stepper-item" [ngClass]="{'completed': currentStep > 3 , 'active': currentStep === 3}">
     <div class="step-counter">4</div>
-    <div class="step-name">Forth</div>
+    <div class="step-name">Quarto</div>
   </div>
-  <div class="stepper-item">
+  <div class="stepper-item" [ngClass]="{'completed': currentStep > 4 , 'active': currentStep === 4}">
     <div class="step-counter">5</div>
-    <div class="step-name"></div>
+    <div class="step-name">Quinto</div>
   </div>
 </div>
-

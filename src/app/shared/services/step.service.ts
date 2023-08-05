@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StepService {
 
-  private _step$ = new Subject<any>();
+  private _step$ = new BehaviorSubject<any>(0);
 
   constructor() { }
 
