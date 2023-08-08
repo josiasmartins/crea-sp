@@ -19,8 +19,8 @@ export class ArtComponent {
   public nextForm() {
     this.step++;
 
-    if (this.step >= 4) {
-      this.step = 4;
+    if (this.step >= 3) {
+      this.step = 3;
     }
 
     this.stepService.setStep(this.step);
@@ -34,7 +34,7 @@ export class ArtComponent {
     }
 
     this.stepService.setStep(this.step);
-    
+
   }
 
 }
