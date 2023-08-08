@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'art-form',
-    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
+    loadChildren: () => import('./modules/art/art.module').then(m => m.ArtModule)
   },
   {
     path: 'register',
