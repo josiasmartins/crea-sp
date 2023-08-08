@@ -41,6 +41,19 @@ $candy-app-theme: mat-light-theme((
   font-weight: bold;
 }
 
+/* colors */
+.color-gray-light {
+  color: #7D95A1;
+}
+
+/* button */
+.button-blue:hover {
+  background-color: #fff;
+  color: #7D95A1;
+  border: 1px solid #3567E9;
+  transition: 0.5s;
+}
+
 .button-blue {
   width: 256px;
   height: 48px;
@@ -49,14 +62,18 @@ $candy-app-theme: mat-light-theme((
   color: #FFFFFF;
 }
 
-.color-gray-light {
+.button-white {
+  width: 256px;
+  height: 48px;
+  border-radius: 30px;
+  border: 1px solid #3567E9;
+  background: #fff;
   color: #7D95A1;
 }
 
-.button-blue:hover {
-  background-color: #fff;
-  color: #7D95A1;
-  border: 1px solid #3567E9;
+.button-white:hover {
+  background: #3567E9;
+  color: #FFFFFF;
   transition: 0.5s;
 }
 
@@ -64,4 +81,10 @@ $candy-app-theme: mat-light-theme((
   text-decoration: none;
   color: #3880ff;
   cursor: pointer;
+}
+
+
+.title-principal {
+  font-size: 24px;
+  font-weight: 700;
 }

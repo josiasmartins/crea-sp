@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PathsEnum } from 'src/app/shared/enums/paths.enum';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  public navigateToARTs() {
+    this.router.navigate([PathsEnum.ARTs_FORMS])
+  }
+
+  public navigateToLogin() {
+    this.router.navigate([PathsEnum.LOGIN])
   }
 
 }
