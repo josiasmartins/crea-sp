@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PathsEnum } from './shared/enums/paths.enum';
 
 const routes: Routes = [
   {
@@ -8,15 +9,15 @@ const routes: Routes = [
     pathMatch:'full'
   },
   {
-    path: 'login',
+    path: PathsEnum.LOGIN,
     loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'art-form',
+    path: PathsEnum.ARTs_FORMS,
     loadChildren: () => import('./modules/art/art.module').then(m => m.ArtModule)
   },
   {
-    path: 'register',
+    path: PathsEnum.REGISTER,
     loadChildren: () => import('./modules/register/register.module').then(m => m.RegisterModule)
   }
 

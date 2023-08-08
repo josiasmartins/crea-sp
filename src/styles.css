@@ -28,3 +28,40 @@ $candy-app-theme: mat-light-theme((
   display: flex;
   justify-content: space-between;
 }
+
+.logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+}
+
+.logo__title {
+  font-size: 18px;
+  color: #146994;
+  font-weight: bold;
+}
+
+.button-blue {
+  width: 256px;
+  height: 48px;
+  border-radius: 30px;
+  background: #3567E9;
+  color: #FFFFFF;
+}
+
+.color-gray-light {
+  color: #7D95A1;
+}
+
+.button-blue:hover {
+  background-color: #fff;
+  color: #7D95A1;
+  border: 1px solid #3567E9;
+  transition: 0.5s;
+}
+
+.terms-blue {
+  text-decoration: none;
+  color: #3880ff;
+  cursor: pointer;
+}
