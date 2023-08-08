@@ -22,3 +22,9 @@ $candy-app-theme: mat-light-theme((
     warn: $candy-app-warn,
   )
 )); */
+
+
+.inline-space-between {
+  display: flex;
+  justify-content: space-between;
+}

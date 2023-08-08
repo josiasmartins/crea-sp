@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { AbstractControl } from '@angular/forms';
 
 @Component({
@@ -8,6 +8,8 @@ import { AbstractControl } from '@angular/forms';
 })
 export class FormsInpputComponent implements OnInit {
 
+  @ViewChild('input', { static: false, read: ElementRef }) input!: ElementRef<HTMLInputElement>;
+
   @Input() placeholder!: string;
   @Input() forms!: any;
   @Input() id: number = 0;
@@ -15,6 +17,14 @@ export class FormsInpputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  activeFocus() {
+    const inputEl = (document.querySelector('#input') as HTMLInputElement).click();
+    this.input.nativeElement.focus();
+    // this.input.nativeElement.click();
+    console.log(inputEl, this.input.nativeElement);
+    inputEl;
   }
 
 }

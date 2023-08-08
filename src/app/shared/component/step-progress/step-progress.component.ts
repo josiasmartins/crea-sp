@@ -9,7 +9,7 @@ import { StepService } from '../../services/step.service';
 export class StepProgressComponent implements OnInit {
 
   @Input() currentStep = 0;
-  steps: string[] = ['First', 'Second', 'Third', 'Forth', 'Five'];
+  steps: string[] = ['First', 'Second', 'Third', 'Forth'];
 
 
   constructor(private stepService: StepService, private ChangeDetectorRef: ChangeDetectorRef) {
