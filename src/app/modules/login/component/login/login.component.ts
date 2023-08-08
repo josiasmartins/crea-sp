@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PathsEnum } from 'src/app/shared/enums/paths.enum';
 
 @Component({
   selector: 'app-login',
@@ -22,6 +23,15 @@ export class LoginComponent implements OnInit {
       id: ['', Validators.required],
       password: ['', Validators.required]
     });
+  }
+
+
+  public navigateToRegister() {
+    this.router.navigate([PathsEnum.REGISTER])
+  }
+
+  public navigateToARTs() {
+    this.router.navigate([PathsEnum.ARTs_FORMS])
   }
 
   onSubmit() {
